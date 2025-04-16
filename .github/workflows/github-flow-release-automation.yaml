@@ -1,5 +1,5 @@
 ---
-name: semantic-release
+name: 'github-flow-release-automation'
 on:
   push:
     branches:
@@ -8,18 +8,20 @@ permissions:
   contents: write
   pull-requests: write
 jobs:
-  main:
+  github-release-automation:
     runs-on: ubuntu-latest
     environment:
       name: Semver
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v4
-      - name: Setup SSH Agent
+
+      - name: setup-ssh-agent
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY_READONLY_ACCESS_TO_MODULES }}
-      - name: Semantic Release
+
+      - name: semantic-release
         uses: cycjimmy/semantic-release-action@v4
         with:
           semantic_version: 24.0.0
@@ -28,7 +30,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run custom action
-        uses: opencepk/opencepk-module-ghactions-common/github-flow-update-release-notes@main
+      - name: github-flow-update-release-notes
+        uses: opencpk/opencpk-module-ghactions-common/github-flow-update-release-notes@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

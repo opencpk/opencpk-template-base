@@ -1,5 +1,5 @@
 ---
-name: github-call-set-topic
+name: 'github-call-set-topic'
 on:
   push:
     branches:
@@ -9,10 +9,10 @@ jobs:
   call-set-topic:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: checkout
         uses: actions/checkout@v4
 
-      - name: Get Token
+      - name: get-token
         id: get_workflow_token
         uses: peter-murray/workflow-application-token-action@v3
         with:
@@ -20,22 +20,22 @@ jobs:
           application_private_key: ${{ secrets.GH_APP_REPO_ACTION_RW_PRIVATE_KEY }}
           revoke_token: true
 
-      - name: Read and Stringify JSON Data
+      - name: read-and-stringify-json-data
         id: read-and-stringify-json
-        uses: opencepk/opencepk-module-ghactions-common/read-and-stringify-json-action@main
+        uses: opencpk/opencpk-module-ghactions-common/read-and-stringify-json-action@main
         with:
           file: '.project-properties.json'
           file_type: 'json'
 
-      - name: Debug Stringified JSON Data
+      - name: debu-stringified-json-data
         run: |
           echo "JSON Data which will be sent: ${{ steps.read-and-stringify-json.outputs.output }}"
 
-      - name: Trigger reusable workflow via API
-        uses: opencepk/opencepk-module-ghactions-common/trigger-workflow-action@main
+      - name: trigger-workflow-action-via-api
+        uses: opencpk/opencpk-module-ghactions-common/trigger-workflow-action@main
         with:
           token: ${{ steps.get_workflow_token.outputs.token }}
-          repo: 'opencepk/opencepk-projects-hub'
+          repo: 'opencpk/opencpk-projects-hub'
           workflow_id: 'github-set-topic-workflow.yml'
           ref: 'main'
           inputs: '{"repo":"${{github.repository}}","properties":"${{ steps.read-and-stringify-json.outputs.output}}"}'

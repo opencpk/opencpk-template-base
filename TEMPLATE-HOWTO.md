@@ -1,21 +1,21 @@
-![cepk-template-base-logo](assets/project-logo.png)
+![opencpk-template-base-logo](assets/project-logo.png)
 
-# cepk-template-base
+# opencpk-template-base
 
-CEPK Cloud Engineering Platform Kit - Template Base - Base git project template containing README, pre-commit and ghactions workflows
+OpenCPK - Open Cloud Platform Kit - Template Base - Base git project template containing README, pre-commit and ghactions workflows
 
 ----
 
-Welcome to the `CEPK Cloud Engineering Platform Kit - Template Base - HOWTO`
+Welcome to the `OpenCPK - Open Cloud Platform Kit - Template Base - HOWTO`
 
 This project is a base template github repo that can be used in any code project.
-It can also be used (forked) as the base for other CEPK Cloud Engineering Platform Kit github repo templates.
+It can also be used (forked) as the base for other OpenCPK repo templates.
 
 ## What's here
 
 <!--TOC-->
 
-- [cepk-template-base](#cepk-template-base)
+- [opencpk-template-base](#opencpk-template-base)
   - [What's here](#whats-here)
   - [Creating a project from this template](#creating-a-project-from-this-template)
   - [Seed the new project with .project.properties.json](#seed-the-new-project-with-projectpropertiesjson)
@@ -25,7 +25,7 @@ It can also be used (forked) as the base for other CEPK Cloud Engineering Platfo
 
 ## Creating a project from this template
 
-* 1 - When creating a new github repository - select this project `opencepk/cepk-template-base` in the `Repository template` field as shown below:
+* 1 - When creating a new github repository - select this project `opencpk/opencpk-template-base` in the `Repository template` field as shown below:
 
 ![template-howto-create-repo-from-template.png](assets/template-howto-create-repo-from-template.png)
 
@@ -46,8 +46,7 @@ It can also be used (forked) as the base for other CEPK Cloud Engineering Platfo
 ## Contributing
 
 If you notice any issues, concerns of possible improvements, please make a branch and pull request on this project.
-Or if you prefer get in touch with the @opencepk/opencepk-platform-devops team.
-
+Or if you prefer, get in touch with the @opencpk/opencpk-admins team.
 
 When developing against this project - run the following command to ensure pre-commit hooks run successfully.
 

@@ -9,27 +9,30 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - name: Extract branch name
+
+      - name: extract-branch-name
         id: extract_branch
         env:
           HEAD_REF: ${{ github.head_ref }}
         run: echo "BRANCH_NAME=${HEAD_REF}" >> "${GITHUB_ENV}"
-      - name: create PR
-        uses: opencepk/opencepk-module-ghactions-common/git-upstream-set-create-pr@main
+
+      - name: git-upstream-set-create-pr
+        uses: opencpk/opencpk-module-ghactions-common/git-upstream-set-create-pr@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          excluded-repos: "opencepk/opencepk-template-base,anythingInFuture/repo-to-exclude"
+          excluded-repos: "opencpk/opencpk-template-base,anythingInFuture/repo-to-exclude"
           upstream-file-path: ".github/UPSTREAM"
           new-branch-name: "add-upstream-file-bot"
           bot-commit-message: "Automatically add UPSTREAM file since it does not exists"
           github-current-branch: ${{ env.BRANCH_NAME }}
+
   git-upstream-set-check-pr-block:
     needs: git-upstream-set-create-pr
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - name: Check for PR Blockage
-        uses: opencepk/opencepk-module-ghactions-common/git-upstream-set-check-pr-block@main
+      - name: git-upstream-set-check-pr-block
+        uses: opencpk/opencpk-module-ghactions-common/git-upstream-set-check-pr-block@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
