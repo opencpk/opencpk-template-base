@@ -25,13 +25,21 @@ It can also be used (forked) as the base for other OpenCPK repo templates.
 
 ## Creating a project from this template
 
+### Creating a project from this template - Option 1 - Fork the template repo into a new repo (recommended)
+
+* 1 - Go to this `opencpk/opencpk-template-base` repo on github and click the `Fork` button in the top right corner of the page.
+* 2 - Select the `Fork` option to create a new repo in your github account.
+* 3 - Give the newly forked repo a name like opencpk-template-module-python or opencpk-exampleproject
+
+### Creating a project from this template - Option 2 - Create a new repo from this template repo (less sustainable)
+
 * 1 - When creating a new github repository - select this project `opencpk/opencpk-template-base` in the `Repository template` field as shown below:
 
 ![template-howto-create-repo-from-template.png](assets/template-howto-create-repo-from-template.png)
 
 ## Seed the new project with .project.properties.json
 
-* 1 - Now that your project was generated from the template, clone it to your local machine.
+* 1 - Now that your project was generated or forked from the template, clone it to your local machine.
 
 * 2 - Edit the file `.project-properties.json.template` and update the values to match the values for your new code project.
 
