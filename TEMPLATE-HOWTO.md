@@ -1,21 +1,21 @@
-![cepk-template-base-logo](assets/project-logo.png)
+![opencpk-template-base-logo](assets/project-logo.png)
 
-# cepk-template-base
+# opencpk-template-base
 
-CEPK Cloud Engineering Platform Kit - Template Base - Base git project template containing README, pre-commit and ghactions workflows
+OpenCPK - Open Cloud Platform Kit - Template Base - Base git project template containing README, pre-commit and ghactions workflows
 
 ----
 
-Welcome to the `CEPK Cloud Engineering Platform Kit - Template Base - HOWTO`
+Welcome to the `OpenCPK - Open Cloud Platform Kit - Template Base - HOWTO`
 
 This project is a base template github repo that can be used in any code project.
-It can also be used (forked) as the base for other CEPK Cloud Engineering Platform Kit github repo templates.
+It can also be used (forked) as the base for other OpenCPK repo templates.
 
 ## What's here
 
 <!--TOC-->
 
-- [cepk-template-base](#cepk-template-base)
+- [opencpk-template-base](#opencpk-template-base)
   - [What's here](#whats-here)
   - [Creating a project from this template](#creating-a-project-from-this-template)
   - [Seed the new project with .project.properties.json](#seed-the-new-project-with-projectpropertiesjson)
@@ -25,13 +25,21 @@ It can also be used (forked) as the base for other CEPK Cloud Engineering Platfo
 
 ## Creating a project from this template
 
-* 1 - When creating a new github repository - select this project `opencepk/cepk-template-base` in the `Repository template` field as shown below:
+### Creating a project from this template - Option 1 - Fork the template repo into a new repo (recommended)
+
+* 1 - Go to this `opencpk/opencpk-template-base` repo on github and click the `Fork` button in the top right corner of the page.
+* 2 - Select the `Fork` option to create a new repo in your github account.
+* 3 - Give the newly forked repo a name like opencpk-template-module-python or opencpk-exampleproject
+
+### Creating a project from this template - Option 2 - Create a new repo from this template repo (less sustainable)
+
+* 1 - When creating a new github repository - select this project `opencpk/opencpk-template-base` in the `Repository template` field as shown below:
 
 ![template-howto-create-repo-from-template.png](assets/template-howto-create-repo-from-template.png)
 
 ## Seed the new project with .project.properties.json
 
-* 1 - Now that your project was generated from the template, clone it to your local machine.
+* 1 - Now that your project was generated or forked from the template, clone it to your local machine.
 
 * 2 - Edit the file `.project-properties.json.template` and update the values to match the values for your new code project.
 
@@ -46,8 +54,7 @@ It can also be used (forked) as the base for other CEPK Cloud Engineering Platfo
 ## Contributing
 
 If you notice any issues, concerns of possible improvements, please make a branch and pull request on this project.
-Or if you prefer get in touch with the @opencepk/opencepk-platform-devops team.
-
+Or if you prefer, get in touch with the @opencpk/opencpk-admins team.
 
 When developing against this project - run the following command to ensure pre-commit hooks run successfully.
 

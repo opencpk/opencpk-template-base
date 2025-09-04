@@ -1,0 +1,23 @@
+# In most cases, the pull request author should be assigned as an assignee of the pull request.
+# This action automatically assigns the pull request author as an assignee.
+---
+name: 'github-flow-pr-author-auto-assign'
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+permissions:
+  pull-requests: write
+
+jobs:
+  github-pr-author-auto-assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: auto-author-assign
+        uses: toshimaru/auto-author-assign@v2.1.1
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
