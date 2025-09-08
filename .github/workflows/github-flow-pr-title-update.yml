@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: github-flow-check-branch-name
         uses: opencpk/opencpk-module-ghactions-common/github-flow-check-branch-name@main
