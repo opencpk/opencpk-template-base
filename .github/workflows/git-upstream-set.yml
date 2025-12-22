@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: extract-branch-name
         id: extract_branch
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: git-upstream-set-check-pr-block
         uses: opencpk/opencpk-module-ghactions-common/git-upstream-set-check-pr-block@main
         with:
