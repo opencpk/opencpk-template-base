@@ -8,7 +8,7 @@ repos:
   # -----------------------------
   # Check if upstream and sync if necessary
   # -----------------------------
-  - repo: git@github.com:opencpk/opencpk-lib-shell-common.git
+  - repo: https://github.com/opencpk/opencpk-lib-shell-common
     rev: v2.0.0
     hooks:
       - id: git-upstream-sync
@@ -17,7 +17,7 @@ repos:
   # -----------------------------
   # set up commit message hook
   # -----------------------------
-  - repo: git@github.com:opencpk/opencpk-lib-shell-common.git
+  - repo: https://github.com/opencpk/opencpk-lib-shell-common
     rev: v2.0.0
     hooks:
       - id: setup-commit-msg-hook
@@ -26,7 +26,7 @@ repos:
   # -----------------------------
   # Replace placeholders in template files with values for your project
   # -----------------------------
-  - repo: git@github.com:opencpk/opencpk-lib-python-common.git
+  - repo: https://github.com/opencpk/opencpk-lib-python-common
     rev: v1.0.1
     hooks:
       - id: find-and-replace-strings
