@@ -15,10 +15,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: setup-ssh-agent
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_KEY_READONLY_ACCESS_TO_MODULES }}
+      # If you have hooks that need SSH access to private repos (for example in tf repos), uncomment this step
+      # - name: setup-ssh-agent
+      #   uses: webfactory/ssh-agent@v0.9.0
+      #   with:
+      #     ssh-private-key: ${{ secrets.SSH_KEY_READONLY_ACCESS_TO_MODULES }}
 
       - name: check-commit-message
         uses: opencpk/opencpk-module-ghactions-common/github-flow-check-commit-message@main
