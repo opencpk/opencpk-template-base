@@ -17,10 +17,10 @@
     },
     {
         "search": "opencpk/opencpk-admins",
-        "replacement": "opencpk/example-github-team-name"
+        "replacement": "exampleou/example-github-team-name"
     },
     {
         "search": "{{PROJECT_CONTRIBUTORS}}",
-        "replacement": "* [Example Person](mailto:eperson@opencpk.com)"
+        "replacement": "* [Example Person](mailto:eperson@example.com)"
     }
 ]

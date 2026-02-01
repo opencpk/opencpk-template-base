@@ -4,7 +4,7 @@ if [[ $CI == "true" ]]
   then
     # This is running in GitHub Actions
     GITHUB_REPO_NAME=$(basename "${GITHUB_REPOSITORY}")
-    if [[ $(echo "${GITHUB_REPO_NAME}" |grep -c "cepk-template-") == 1 ]]; then
+    if [[ $(echo "${GITHUB_REPO_NAME}" |grep -c "cpk-template-") == 1 ]]; then
       # This is a template repo
       echo "SKIP=find-and-replace-strings" >> $GITHUB_ENV
     else
@@ -13,7 +13,7 @@ if [[ $CI == "true" ]]
     fi
   else
     # This is running locally
-    if [[ $(echo "${PWD}" |grep -c "cepk-template-") == 1 ]]; then
+    if [[ $(echo "${PWD}" |grep -c "cpk-template-") == 1 ]]; then
       # This is a template repo
       export "SKIP=find-and-replace-strings"
     else
