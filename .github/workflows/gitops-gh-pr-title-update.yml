@@ -1,22 +1,22 @@
 ---
-name: 'github-flow-pr-title-update'
+name: 'gitops-gh-pr-title-update'
 on:
   pull_request:
     types: [opened, edited, synchronize]
 
 jobs:
-  github-pr-title-update:
+  gitops-gh-pr-title-update:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: github-flow-check-branch-name
+      - name: gitops-gh-check-branch-name
         uses: opencpk/opencpk-module-ghactions-common/github-flow-check-branch-name@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: github-flow-update-pr-title
+      - name: gitops-gh-update-pr-title
         uses: opencpk/opencpk-module-ghactions-common/github-flow-update-pr-title@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

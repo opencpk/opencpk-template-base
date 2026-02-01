@@ -1,5 +1,5 @@
 ---
-name: 'github-flow-release-automation'
+name: 'gitops-gh-release-automation'
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ permissions:
   contents: write
   pull-requests: write
 jobs:
-  github-release-automation:
+  gitops-gh-release-automation:
     runs-on: ubuntu-latest
     environment:
       name: Semver
@@ -30,7 +30,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: github-flow-update-release-notes
+      - name: gitops-gh-update-release-notes
         uses: opencpk/opencpk-module-ghactions-common/github-flow-update-release-notes@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
