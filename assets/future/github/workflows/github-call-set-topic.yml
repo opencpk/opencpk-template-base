@@ -27,7 +27,7 @@ jobs:
           file: '.project-properties.json'
           file_type: 'json'
 
-      - name: debu-stringified-json-data
+      - name: debug-stringified-json-data
         run: |
           echo "JSON Data which will be sent: ${{ steps.read-and-stringify-json.outputs.output }}"
 

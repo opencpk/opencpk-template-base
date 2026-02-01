@@ -9,8 +9,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    # assignees:
-    #   - "@opencpk/opencpk-admins"
+      # assignees:
+      #   - "@opencpk/opencpk-admins"
       # group name used in pull request titles and branch names
       ghactions-version-updates:
         applies-to: version-updates

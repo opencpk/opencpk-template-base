@@ -18,6 +18,8 @@ It can also be used (forked) as the base for other OpenCPK repo templates.
 - [opencpk-template-base](#opencpk-template-base)
   - [What's here](#whats-here)
   - [Creating a project from this template](#creating-a-project-from-this-template)
+    - [Creating a project from this template - Option 1 - Fork the template repo into a new repo (recommended)](#creating-a-project-from-this-template---option-1---fork-the-template-repo-into-a-new-repo-recommended)
+    - [Creating a project from this template - Option 2 - Create a new repo from this template repo (less sustainable)](#creating-a-project-from-this-template---option-2---create-a-new-repo-from-this-template-repo-less-sustainable)
   - [Seed the new project with .project.properties.json](#seed-the-new-project-with-projectpropertiesjson)
   - [Contributing](#contributing)
 

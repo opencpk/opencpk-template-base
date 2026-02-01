@@ -1,5 +1,5 @@
 ---
-name: 'github-flow-commit-message-validation'
+name: 'gitops-gh-commit-message-validation'
 on:
   pull_request:
     types:
@@ -7,7 +7,7 @@ on:
       - synchronize
 
 jobs:
-  github-commit-message-validation:
+  commit-message-validation:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -15,12 +15,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: setup-ssh-agent
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_KEY_READONLY_ACCESS_TO_MODULES }}
+      # If you have hooks that need SSH access to private repos (for example in tf repos), uncomment this step
+      # - name: setup-ssh-agent
+      #   uses: webfactory/ssh-agent@v0.9.0
+      #   with:
+      #     ssh-private-key: ${{ secrets.SSH_KEY_READONLY_ACCESS_TO_MODULES }}
 
-      - name: github-flow-check-commit-message
+      - name: check-commit-message
         uses: opencpk/opencpk-module-ghactions-common/github-flow-check-commit-message@main
         with:
           commit-pattern: '^(feat|fix|build|breaking|chore|ci|docs|perf|refactor|revert|test)\/([\w-]+)*(:\s+)?(.+)?$'
